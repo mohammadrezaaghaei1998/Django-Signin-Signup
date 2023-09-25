@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django authentication</title>
+</head>
+<body>
+    <div class="auth" style="text-align:center; justify-content:center;  position:relative; top:200;">
+        <h2>Welcome to django authentication</h2>
+
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'custom_logout' %}"><button>logout</button></a>
+        {% else %}
+            <a href="{% url 'register' %}"><button>register</button></a>
+            <a href="{% url 'login' %}"><button>login</button></a>
+        {% endif %}
+        
+        
+
+
+    </div>
+    
+    
+</body>
+</html>
